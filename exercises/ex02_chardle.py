@@ -28,16 +28,18 @@ def input_letter() -> str:
 
 def contains_char(word: str, letter: str) -> None:
     """Prints where the letter is found in word and how many times."""
+    print("Searching for", letter, "in", word)
+    # did not realize I had to add a searching message
     if word[0] == letter:
-        print(letter, "found at index 1")
+        print(letter, "found at index 0")
     if word[1] == letter:
-        print(letter, "found at index 2")
+        print(letter, "found at index 1")
     if word[2] == letter:
-        print(letter, "found at index 3")
+        print(letter, "found at index 2")
     if word[3] == letter:
-        print(letter, "found at index 4")
+        print(letter, "found at index 3")
     if word[4] == letter:
-        print(letter, "found at index 5")
+        print(letter, "found at index 4")
     # we want to check each index individually for a match to the inputted letter
     index: int = 0
     count: int = 0
@@ -51,9 +53,8 @@ def contains_char(word: str, letter: str) -> None:
     if count == 0:
         print("No instances of", letter, "found in", word)
     elif count == 1:
-        print(count, "instance of", letter, "found in", word)
+        print("1 instance of", letter, "found in", word)
         # "instance" is different for count == 1
-        # count could just be "1"
     else:
         print(count, "instances of", letter, "found in", word)
     # checking at each count variable to print a message if the count isn't 0 or 1
