@@ -69,6 +69,7 @@ def main(secret: str) -> None:
         if input == secret:
             print(f"You won in {turns}/6 turns!")
             return None
+        # use return instead of exit to prevent the function from harshly stopping
         turns += 1
     if turns > 6:
         print("X/6 - Sorry, try again tomorrow!")

@@ -1,19 +1,18 @@
-def check_first_letter(word: str, letter: str) -> str:
-    if word[0] == letter:
-        return "match!"
-    else:
-        return "no match!"
+my_numbers: list[str] = ["bananas", "eggs"]
+my_numbers.append("bananas")
+print(my_numbers)
+print(len(my_numbers))
 
+my_name: str = "Izzi"
+my_name_as_list: list[str] = list(my_name)
+print(my_name_as_list)
+my_name_as_list[3] = "y"
+print(my_name_as_list)
+my_name_as_list.insert(4, "i")
 
-def get_weather_report() -> str:
-    weather: str = input("What is the weather?")
-    if weather == "rainy" or weather == "cold":
-        print("Bring a jacket!")
-    elif weather == "hot":
-        print("Keep cool out there!")
-    else:
-        print("I don't recognize this weather.")
-    return weather
-
-
-print(get_weather_report())
+x: list[float] = [1.0, 2.0]
+y: list[float] = [3.0, 4.0]
+y = x
+x[0] = 3.0
+print(x)
+print(y)
